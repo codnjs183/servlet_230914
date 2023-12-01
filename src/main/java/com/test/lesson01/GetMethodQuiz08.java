@@ -47,6 +47,14 @@ public class GetMethodQuiz08 extends HttpServlet {
 			}
 		}
 		
+		// 방법2
+		/*
+		 * if(line.contains(keyword) {
+		 * 		line = line.replace(keyword, "<b>" + keyword + "/<b>");
+		 * 		out.print(line + "<br>");
+		 * }
+		 */
+		
 		out.print("</body></html>");
 	}
 }

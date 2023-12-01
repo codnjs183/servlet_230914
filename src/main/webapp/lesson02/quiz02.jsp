@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>사용자 정보 확인</title>
+<title>Quiz02</title>
 
 <!-- Bootstrap CDN 주소 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -12,14 +14,12 @@
 </head>
 <body>
 	<div class="container">
-		<h1>로그인</h1>
-		<form method="post" action="/lesson01/quiz10">
-			<div class="form-group">
-			<input type="text" class="form-control col-3 my-2" name="userId" placeholder="아이디를 입력하세요">
-			<input type="text" class="form-control col-3" name="userPw" placeholder="비밀번호를 입력하세요">
-			</div>
-			<button type="submit" class="btn btn-primary">로그인</button>
-		</form>
+		<h1>날짜, 시간 링크</h1>
+		<br>
+		<div class="d-flex">
+			<button type="submit" class="btn btn-info">현재 시간 확인</button>
+			<button type="submit" class="btn btn-success">현재 날짜 확인</button>
+		</div>
 	</div>
 </body>
 </html>
