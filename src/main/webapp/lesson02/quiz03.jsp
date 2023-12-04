@@ -1,12 +1,10 @@
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quiz02_1</title>
+<title>체격 조건</title>
 
 <!-- Bootstrap CDN 주소 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -15,23 +13,17 @@
 
 </head>
 <body>
-<%
-	String type = request.getParameter("type");
-	Date now = new Date();
-	String result = null;
-
-	if (type.equals("time")) {
-		SimpleDateFormat sdf = new SimpleDateFormat("현재 시간은 HH시 mm분 ss초 입니다.");
-		result = sdf.format(now);
-	} else { // date
-		SimpleDateFormat sdf = new SimpleDateFormat("오늘 날짜는 yyyy년 MM월 dd일 입니다.");
-		result = sdf.format(now);
-	}
-	
-	
-%>
-
-
-
+	<div class="container">
+		<h1>체격 조건 입력</h1>
+		<form method="get" action="/lesson02/quiz03_1.jsp">
+			<div class="d-flex align-items-end">
+				<input type="text" name="height" class="form-control col-2 mx-1" placeholder="키를 입력하세요.">
+				<div> cm</div>
+				<input type="text" name="weight" class="form-control col-2 mx-1" placeholder="몸무게를 입력하세요.">
+				<div> kg</div>
+				<button type="submit" class="btn btn-info mx-2">계산</button>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
