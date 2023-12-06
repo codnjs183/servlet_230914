@@ -55,7 +55,8 @@
   						continue;
   					}
   					
-  					if (above4 != null && Double.parseDouble(String.valueOf(line.get("point"))) <= 4) {
+  					if (above4 != null && (double)line.get("point") <= 4) {
+  						// Double.parseDouble(String.valueOf(line.get("point")))
   						continue;
   					}
   				%>
